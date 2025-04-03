@@ -1,0 +1,32 @@
+# Binários e builds
+bin/
+obj/
+
+# Configurações do usuário no VS Code e OmniSharp
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+packages/
+project.lock.json
+project.assets.json
+
+*.log
+logs/
+log/
+debug/
+release/
+
+out/
+publish/
+artifacts/
+
+.idea/
+*.iml
+
+.DS_Store
+
+Thumbs.db
+desktop.ini
