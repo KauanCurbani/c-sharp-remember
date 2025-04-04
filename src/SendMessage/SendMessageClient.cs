@@ -1,8 +1,8 @@
-namespace MeuProjeto.send_messages;
+namespace MeuProjeto.SendMessage;
 
 public class SendMessageClient(SendMessageInterface sendMessageInterface)
 {
-    private readonly List<ObserverInterface> _observers = [];
+    private readonly List<IObserver> _observers = [];
 
     public async Task Send(string message)
     {
@@ -11,7 +11,7 @@ public class SendMessageClient(SendMessageInterface sendMessageInterface)
         NotifyObservers(messageSent);
     }
 
-    public void AddObserver(ObserverInterface observer)
+    public void AddObserver(IObserver observer)
     {
         _observers.Add(observer);
     }

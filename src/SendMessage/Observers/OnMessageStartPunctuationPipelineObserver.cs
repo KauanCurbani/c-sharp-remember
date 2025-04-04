@@ -1,6 +1,6 @@
-namespace MeuProjeto.send_messages.observers;
+namespace MeuProjeto.SendMessage.Observers;
 
-public class OnMessageStartPunctuationPipelineObserver: ObserverInterface
+public class OnMessageStartPunctuationPipelineObserver: IObserver
 {
     public void Call(string messageSent)
     {

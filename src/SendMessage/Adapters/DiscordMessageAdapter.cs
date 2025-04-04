@@ -1,17 +1,10 @@
-namespace MeuProjeto.send_messages.adapters;
+namespace MeuProjeto.SendMessage.Adapters;
 
-public class DiscordMessageAdapter : SendMessageInterface
+public class DiscordMessageAdapter(bool? throws): SendMessageInterface
 {
-    private readonly bool? _throws;
-
-    public DiscordMessageAdapter(bool? throws)
-    {
-        _throws = throws;
-    }
-
     public override async Task<string> SendMessage(string message)
     {
-        if (_throws == true)
+        if (throws == true)
         {
             throw new Exception("Simulated exception in DiscordMessageAdapter");
         }

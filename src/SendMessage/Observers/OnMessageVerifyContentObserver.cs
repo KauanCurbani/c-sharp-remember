@@ -1,6 +1,6 @@
-namespace MeuProjeto.send_messages.observers;
+namespace MeuProjeto.SendMessage.Observers;
 
-public class OnMessageVerifyContentObserver: ObserverInterface
+public class OnMessageVerifyContentObserver: IObserver
 {
     public void Call(string messageSent)
     {

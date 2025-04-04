@@ -1,4 +1,4 @@
-namespace MeuProjeto.send_messages.adapters;
+namespace MeuProjeto.SendMessage.Adapters;
 
 public class WhatsAppAdapter: SendMessageInterface
 {

@@ -1,4 +1,4 @@
-namespace MeuProjeto.send_messages.decorators;
+namespace MeuProjeto.SendMessage.Decorators;
 
 public class TranslateDecorator(SendMessageInterface provider) : SendMessageInterface
 {

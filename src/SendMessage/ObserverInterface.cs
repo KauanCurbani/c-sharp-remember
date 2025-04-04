@@ -1,6 +1,6 @@
-namespace MeuProjeto.send_messages;
+namespace MeuProjeto.SendMessage;
 
-public interface ObserverInterface
+public interface IObserver
 {
     void Call(string messageSent);
 }

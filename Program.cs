@@ -1,7 +1,7 @@
-using MeuProjeto.send_messages;
-using MeuProjeto.send_messages.adapters;
-using MeuProjeto.send_messages.decorators;
-using MeuProjeto.send_messages.observers;
+using MeuProjeto.SendMessage;
+using MeuProjeto.SendMessage.Adapters;
+using MeuProjeto.SendMessage.Decorators;
+using MeuProjeto.SendMessage.Observers;
 
 namespace MeuProjeto;
 

@@ -1,4 +1,4 @@
-namespace MeuProjeto.send_messages;
+namespace MeuProjeto.SendMessage;
 
 public abstract class SendMessageInterface
 {

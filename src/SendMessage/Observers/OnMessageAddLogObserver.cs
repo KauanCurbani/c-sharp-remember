@@ -1,6 +1,6 @@
-namespace MeuProjeto.send_messages.observers;
+namespace MeuProjeto.SendMessage.Observers;
 
-public class OnMessageAddLogObserver: ObserverInterface
+public class OnMessageAddLogObserver: IObserver
 {
     public void Call(string messageSent)
     {
