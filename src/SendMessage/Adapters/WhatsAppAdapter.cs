@@ -2,8 +2,10 @@ namespace MeuProjeto.send_messages.adapters;
 
 public class WhatsAppAdapter: SendMessageInterface
 {
-    public override void SendMessage(string message)
+    public override async Task<string> SendMessage(string message)
     {
+        await Task.Delay(100); // Simulate async work
         Console.WriteLine($"Sending message to Whatsapp: {message}");
+        return message;
     }
 }

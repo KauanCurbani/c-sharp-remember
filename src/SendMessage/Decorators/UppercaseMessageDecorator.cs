@@ -2,9 +2,9 @@ namespace MeuProjeto.send_messages.decorators;
 
 public class UppercaseMessageDecorator(SendMessageInterface sendMessageInterface) : SendMessageInterface
 {
-    public override void SendMessage(string message)
+    public override async Task<string> SendMessage(string message)
     {
         string upperCaseMessage = message.ToUpper();
-        sendMessageInterface.SendMessage(upperCaseMessage);
+        return await sendMessageInterface.SendMessage(upperCaseMessage);
     }
 }

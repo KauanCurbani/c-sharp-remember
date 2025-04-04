@@ -11,16 +11,16 @@ public class FallbackDecorator: SendMessageInterface
         _fallbackSendMessageInterface = fallbackSendMessageInterface;
     }
 
-    public override void SendMessage(string message)
+    public override async Task<string> SendMessage(string message)
     {
         try
         {
-            _sendMessageInterface.SendMessage(message);
+            return await _sendMessageInterface.SendMessage(message);
         }
         catch (Exception)
         {
             Console.WriteLine("Failed to send message using the primary method. Trying fallback method...");
-            _fallbackSendMessageInterface.SendMessage(message);
+            return await _fallbackSendMessageInterface.SendMessage(message);
         }
     }
 }
