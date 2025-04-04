@@ -1,3 +1,5 @@
+namespace MeuProjeto.send_messages.adapters;
+
 public class DiscordMessageAdapter : SendMessageInterface
 {
     private readonly bool? _throws;

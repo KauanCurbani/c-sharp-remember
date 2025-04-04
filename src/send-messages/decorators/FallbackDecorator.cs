@@ -1,3 +1,5 @@
+namespace MeuProjeto.send_messages.decorators;
+
 public class FallbackDecorator: SendMessageInterface
 {
     private readonly SendMessageInterface _sendMessageInterface;
@@ -17,6 +19,7 @@ public class FallbackDecorator: SendMessageInterface
         }
         catch (Exception)
         {
+            Console.WriteLine("Failed to send message using the primary method. Trying fallback method...");
             _fallbackSendMessageInterface.SendMessage(message);
         }
     }

@@ -1,13 +1,9 @@
-public class SendMessageClient {
-    private readonly SendMessageInterface _sendMessageInterface;
+namespace MeuProjeto.send_messages;
 
-    public SendMessageClient(SendMessageInterface sendMessageInterface)
-    {
-        _sendMessageInterface = sendMessageInterface;
-    }
-
+public class SendMessageClient(SendMessageInterface sendMessageInterface)
+{
     public void Send(string message)
     {
-        _sendMessageInterface.SendMessage(message);
+        sendMessageInterface.SendMessage(message);
     }
 }

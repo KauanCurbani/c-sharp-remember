@@ -1,13 +1,18 @@
-class Program
+using MeuProjeto.send_messages;
+using MeuProjeto.send_messages.adapters;
+using MeuProjeto.send_messages.decorators;
+
+namespace MeuProjeto;
+
+internal abstract class MeuProjeto
 {
-
-    static void Main()
+    private static void Main()
     {
-        SendMessageInterface _messageProvider = new DiscordMessageAdapter(true);
-        _messageProvider = new UppercaseMessageDecorator(_messageProvider);
-        _messageProvider = new FallbackDecorator(_messageProvider, new EmailMessageAdapter());
+        SendMessageInterface messageProvider = new DiscordMessageAdapter(true);
+        messageProvider = new UppercaseMessageDecorator(messageProvider);
+        messageProvider = new FallbackDecorator(messageProvider, new WhatsAppAdapter());
 
-        SendMessageClient _sendMessageClient = new SendMessageClient(_messageProvider);
-        _sendMessageClient.Send("Hello!!");
+        SendMessageClient sendMessageClient = new SendMessageClient(messageProvider);
+        sendMessageClient.Send("Hello!!");
     }
 }

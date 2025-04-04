@@ -1,3 +1,5 @@
+namespace MeuProjeto.send_messages.adapters;
+
 public class EmailMessageAdapter : SendMessageInterface
 {
     public override void SendMessage(string message)

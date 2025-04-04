@@ -1,15 +1,10 @@
-public class UppercaseMessageDecorator : SendMessageInterface
+namespace MeuProjeto.send_messages.decorators;
+
+public class UppercaseMessageDecorator(SendMessageInterface sendMessageInterface) : SendMessageInterface
 {
-    private readonly SendMessageInterface _sendMessageInterface;
-
-    public UppercaseMessageDecorator(SendMessageInterface sendMessageInterface)
-    {
-        _sendMessageInterface = sendMessageInterface;
-    }
-
     public override void SendMessage(string message)
     {
         string upperCaseMessage = message.ToUpper();
-        _sendMessageInterface.SendMessage(upperCaseMessage);
+        sendMessageInterface.SendMessage(upperCaseMessage);
     }
 }
