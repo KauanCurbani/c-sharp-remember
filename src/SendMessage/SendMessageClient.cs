@@ -7,7 +7,7 @@ public class SendMessageClient(SendMessageInterface sendMessageInterface)
     public async Task Send(string message)
     {
         var messageSent = await sendMessageInterface.SendMessage(message);
-        Console.WriteLine("\n");
+        Console.WriteLine("");
         NotifyObservers(messageSent);
     }
 
